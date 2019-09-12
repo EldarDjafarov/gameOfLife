@@ -12,7 +12,7 @@ public class Main {
         GofReader gofReader = new GofReader();
         InformObtainer informObtainer = gofReader.read("allAlive.txt");
         Game game = new Game();
-        String[][] array = game.generations(informObtainer.makeGofArray(), informObtainer.getHeight(), informObtainer.getWidth(), informObtainer.getNumberOfIterations());
+        char[][] array = game.generations(informObtainer.makeGofArray(), informObtainer.getHeight(), informObtainer.getWidth(), informObtainer.getNumberOfIterations());
         GofWriter gofWriter=new GofWriter();
         gofWriter.writeToFile("newFile",array);
         System.out.println();

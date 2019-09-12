@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class GofWriter {
 
-    public void writeToFile(String fileName,String [][] arr) {
+    public void writeToFile(String fileName,char [][] arr) {
 
         try {
             FileWriter fileWriter =
@@ -15,7 +15,7 @@ public class GofWriter {
                     new BufferedWriter(fileWriter);
             for (int i = 0; i < arr.length; i++) {
                 for (int j = 0; j < arr[0].length; j++) {
-                    bufferedWriter.write(String.valueOf(arr[i][j]+" "));
+                    bufferedWriter.write(String.valueOf(arr[i][j])+" ");
                 }
                 bufferedWriter.newLine();
             }

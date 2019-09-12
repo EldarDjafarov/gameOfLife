@@ -6,16 +6,16 @@ public class InformObtainer {
     private int width;
     private StringBuilder lineWithArray;
 
-    public String[][] makeGofArray() {
+    public char[][] makeGofArray() {
 
 
-        String[] array = lineWithArray.toString().split(" ");
+        char[] array = lineWithArray.toString().toCharArray();
 
-        String[][] gofArray = new String[height][width];
+        char[][] gofArray = new char[height][width];
         int k = 0;
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                gofArray[i][j] = array[k];
+                gofArray[i][j] =array[k];
                 k++;
             }
 
