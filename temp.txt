@@ -1,3 +1,0 @@
-Iterations - 7
-Sizes - 10 20
-X O O O O O O O O O O O X X O O O O O O O O O X X O O O O O O O O O X O O O O X O O O O X O O X O O O O O X X O O O O O O O O O O O O X O O O O O O O O O X O O O O O O O O O X O O O O O O O X O O O X O O O X X O O O O O O O O O X O O O O X O O X X O O O O O O O O O O X O O O O X O O O O O X O O O X O O X X O O O O O O O O O O X O O O O X O O X X O O O O O O O O O O O O O O O X O O X X O O O O O X 
