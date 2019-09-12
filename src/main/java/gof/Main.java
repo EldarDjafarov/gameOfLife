@@ -1,3 +1,4 @@
+package gof;
 
 import gof.game.Game;
 import gof.model.InformObtainer;
