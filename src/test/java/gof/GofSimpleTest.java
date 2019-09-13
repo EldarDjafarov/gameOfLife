@@ -1,6 +1,8 @@
 package gof;
 
 import gof.game.Game;
+import gof.model.InformObtainer;
+import gof.reader.GofReader;
 import org.junit.Assert;
 import org.junit.Test;
 public class GofSimpleTest {
@@ -19,19 +21,18 @@ public class GofSimpleTest {
 
     @Test
     public void testAllAliveGeneration() {
-        Game game = new Game();
-        char[][] array = {
-                {'X', 'X', 'X', 'X', 'X'},
-                {'X', 'X', 'X', 'X', 'X'},
-                {'X', 'X', 'X', 'X', 'X'},
-                {'X', 'X', 'X', 'X', 'X'}};
         char[][] expect = {
                 {'X', 'O', 'O', 'O', 'X'},
                 {'O', 'O', 'O', 'O', 'O'},
                 {'O', 'O', 'O', 'O', 'O'},
                 {'X', 'O', 'O', 'O', 'X'}};
 
-        char[][] actual = game.generations(array, 4, 5, 1);
+        GofReader gofReader = new GofReader();
+        InformObtainer informObtainer = gofReader.read("allAlive.txt");
+        Game game = new Game();
+        char[][] actual = game.generations(informObtainer.makeGofArray(),
+                informObtainer.getHeight(), informObtainer.getWidth(),
+                informObtainer.getNumberOfIterations());
         Assert.assertArrayEquals(expect,actual);
 
     }
