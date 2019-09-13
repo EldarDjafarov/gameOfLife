@@ -10,19 +10,7 @@ public class GofComplexTest {
 
     @Test
     public void complexTest() {
-        Game game = new Game();
-        char[][] exampleArray = {
-                {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-                {'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'X'},
-                {'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O', 'X', 'O', 'X'},
-                {'O', 'O', 'X', 'O', 'X', 'O', 'O', 'O', 'O', 'X', 'O'},
-                {'O', 'X', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'X', 'X'},
-                {'O', 'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'X', 'O'},
-                {'O', 'O', 'X', 'X', 'O', 'O', 'X', 'X', 'X', 'X', 'O'},
-                {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-                {'O', 'X', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-                {'O', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-                {'O', 'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O'}};
+        
 
         char[][] expect={
                 {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
@@ -36,6 +24,7 @@ public class GofComplexTest {
                 {'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
                 {'X', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
                 {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'}};
+        Game game = new Game();
         GofReader gofReader=new GofReader();
         InformObtainer informObtainer=gofReader.read("newFile2");
 
