@@ -44,7 +44,7 @@ public class Game {
                 }
 
             }
-            
+
 
             generations(future,height,width, numberOfIterations);
         }

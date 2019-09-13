@@ -1,6 +1,8 @@
 package gof;
 
 import gof.game.Game;
+import gof.model.InformObtainer;
+import gof.reader.GofReader;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,7 +11,7 @@ public class GofComplexTest {
     @Test
     public void complexTest() {
         Game game = new Game();
-        char[][] array = {
+        char[][] exampleArray = {
                 {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
                 {'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'X'},
                 {'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O', 'X', 'O', 'X'},
@@ -34,8 +36,10 @@ public class GofComplexTest {
                 {'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
                 {'X', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
                 {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'}};
+        GofReader gofReader=new GofReader();
+        InformObtainer informObtainer=gofReader.read("newFile2");
 
-        char[][] actual = game.generations(array, array.length, array[0].length, 1);
+        char[][] actual = game.generations(informObtainer.makeGofArray(), informObtainer.getHeight(), informObtainer.getWidth(), informObtainer.getNumberOfIterations());
         Assert.assertArrayEquals(expect,actual);
     }
     @Test

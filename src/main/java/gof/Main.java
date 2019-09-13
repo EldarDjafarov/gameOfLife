@@ -14,7 +14,7 @@ public class Main {
         Game game = new Game();
         char[][] array = game.generations(informObtainer.makeGofArray(), informObtainer.getHeight(), informObtainer.getWidth(), informObtainer.getNumberOfIterations());
         GofWriter gofWriter=new GofWriter();
-        gofWriter.writeToFile("newFile",array);
+        gofWriter.writeToFile("newFile2",array);
 
 
     }
