@@ -6,29 +6,31 @@ import java.io.IOException;
 
 public class GofWriter {
 
-    public void writeToFile(String fileName,char [][] arr) {
+    public void writeToFile(String fileName,char[][] arr) {
 
-        try {
-            FileWriter fileWriter =
-                    new FileWriter(fileName);
-            BufferedWriter bufferedWriter =
-                    new BufferedWriter(fileWriter);
-            for (int i = 0; i < arr.length; i++) {
-                for (int j = 0; j < arr[0].length; j++) {
-                    bufferedWriter.write(String.valueOf(arr[i][j])+" ");
+
+
+                try(BufferedWriter bufferedWriter =
+                            new BufferedWriter(new FileWriter(fileName));) {
+
+                    for (int i = 0; i < arr.length; i++) {
+                        for (int j = 0; j < arr[0].length; j++) {
+                            bufferedWriter.write((arr[i][j]));
+                        }
+                        bufferedWriter.newLine();
+                    }
+                } catch (IOException ex) {
+                    System.out.println(
+                            "Error writing to file '"
+                                    + fileName + "'");
+
                 }
-                bufferedWriter.newLine();
             }
-            bufferedWriter.flush();
-            bufferedWriter.close();
-        } catch (IOException ex) {
-            System.out.println(
-                    "Error writing to file '"
-                            + fileName + "'");
+
 
         }
-    }
 
 
-}
+
+
 

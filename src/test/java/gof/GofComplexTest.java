@@ -9,7 +9,7 @@ public class GofComplexTest {
     @Test
     public void complexTest() {
         Game game = new Game();
-       char[][] array = {
+        char[][] array = {
                 {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
                 {'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'X'},
                 {'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O', 'X', 'O', 'X'},
@@ -22,18 +22,18 @@ public class GofComplexTest {
                 {'O', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
                 {'O', 'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O'}};
 
-            char[][] expect={
-                    {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-                    {'O', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'X', 'O'},
-                    {'O', 'X', 'O', 'X', 'O', 'X', 'O', 'O', 'O', 'O', 'X'},
-                    {'O', 'O', 'X', 'O', 'X', 'O', 'O', 'O', 'X', 'O', 'O'},
-                    {'O', 'X', 'X', 'X', 'O', 'O', 'O', 'O', 'X', 'X', 'X'},
-                    {'O', 'X', 'O', 'X', 'O', 'O', 'X', 'X', 'O', 'O', 'O'},
-                    {'O', 'O', 'X', 'O', 'O', 'O', 'X', 'X', 'X', 'X', 'O'},
-                    {'O', 'O', 'O', 'X', 'O', 'O', 'O', 'X', 'X', 'O', 'O'},
-                    {'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-                    {'X', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-                    {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'}};
+        char[][] expect={
+                {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+                {'O', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'X', 'O'},
+                {'O', 'X', 'O', 'X', 'O', 'X', 'O', 'O', 'O', 'O', 'X'},
+                {'O', 'O', 'X', 'O', 'X', 'O', 'O', 'O', 'X', 'O', 'O'},
+                {'O', 'X', 'X', 'X', 'O', 'O', 'O', 'O', 'X', 'X', 'X'},
+                {'O', 'X', 'O', 'X', 'O', 'O', 'X', 'X', 'O', 'O', 'O'},
+                {'O', 'O', 'X', 'O', 'O', 'O', 'X', 'X', 'X', 'X', 'O'},
+                {'O', 'O', 'O', 'X', 'O', 'O', 'O', 'X', 'X', 'O', 'O'},
+                {'O', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+                {'X', 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+                {'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'}};
 
         char[][] actual = game.generations(array, array.length, array[0].length, 1);
         Assert.assertArrayEquals(expect,actual);

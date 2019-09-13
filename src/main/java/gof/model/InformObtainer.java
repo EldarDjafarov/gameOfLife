@@ -1,5 +1,6 @@
 package gof.model;
 
+
 public class InformObtainer {
     private int numberOfIterations;
     private int height;

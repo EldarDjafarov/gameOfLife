@@ -3,7 +3,6 @@ package gof;
 import gof.game.Game;
 import org.junit.Assert;
 import org.junit.Test;
-
 public class GofSimpleTest {
 
     @Test

@@ -18,7 +18,7 @@ public class Game {
                     char currentCell = array[i][j];
                     // The cell needs to be subtracted from
                     // its neighbours
-                    if (currentCell=='X') {
+                    if (currentCell == 'X') {
                         aliveNeighbours = aliveNeighbours - 1;
                     }
                     //We need l an m to check all neighbors
@@ -28,22 +28,23 @@ public class Game {
                                if they checked by a simple method designed for 8 neighbors*/
                             if (i + l >= 0 && i + l < array.length && j + m >= 0 && j + m < array[0].length) {
                                 char currentNeighbor = array[i + l][j + m];
-                                if (currentNeighbor=='X')
+                                if (currentNeighbor == 'X')
                                     aliveNeighbours++;
                             }
                         }
 
-                    if ((currentCell== 'X') && aliveNeighbours < 2)
+                    if ((currentCell == 'X') && aliveNeighbours < 2)
                         future[i][j] = 'O';
-                    else if ((currentCell== 'X')  && aliveNeighbours > 3)
+                    else if ((currentCell == 'X') && aliveNeighbours > 3)
                         future[i][j] = 'O';
-                    else if ((currentCell== 'O')  && aliveNeighbours == 3)
+                    else if ((currentCell == 'O') && aliveNeighbours == 3)
                         future[i][j] = 'X';
                     else
                         future[i][j] = array[i][j];
                 }
 
             }
+            
 
             generations(future,height,width, numberOfIterations);
         }

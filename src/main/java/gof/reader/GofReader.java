@@ -16,11 +16,8 @@ public class GofReader {
         StringBuilder lineWithArray= new StringBuilder();
 
         String line = null;
-        try {
-            FileReader fileReader =
-                    new FileReader(fileName);
-            BufferedReader bufferedReader =
-                    new BufferedReader(fileReader);
+        try(BufferedReader bufferedReader=new BufferedReader(new FileReader(fileName))){
+
 
             while((line = bufferedReader.readLine()) != null) {
                 if(line.startsWith("Iterations")){
@@ -35,14 +32,14 @@ public class GofReader {
                     informObtainer.setHeight( height);
                     informObtainer.setWidth(width);
                 }
-                if (line.contains("X") ||line.contains("O")){
+                if (line.contains("X") || line.contains("O")){
                     lineWithArray.append(line.trim());
                     informObtainer.setLine(lineWithArray);
                 }
             }
 
 
-            bufferedReader.close();
+
         }
         catch(FileNotFoundException ex) {
             System.out.println(
@@ -55,6 +52,7 @@ public class GofReader {
                             + fileName + "'");
 
         }
+
         return informObtainer;
     }
 
